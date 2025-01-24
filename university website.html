@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohan Babu University</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            text-align: center;
+            color: yellow ;
+            background-color: maroon;
+            padding: 20px 0;
+        }
+
+        .header img {
+            max-width: 200px;
+        }
+
+        .container {
+            text-align:left;
+            font-size: 72px;
+            position: relative;
+            color: white;
+        }
+
+        .container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .sub-text {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+        }
+
+        .button {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fbbd17;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background-color: antiquewhite;
+        }
+
+        .section .text {
+            flex: 1;
+            padding: 20px;
+            font-size: xx-large;
+            background-color: #fbbd17;
+        }
+
+        .section img {
+            flex: 1;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .text h2 {
+            color: #8c2128;
+            font-size: 28px;
+        }
+
+        .text p {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .text .buttons {
+            margin-top: 20px;
+        }
+
+        .text .buttons a {
+            background-color: #fbbd17;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .text .buttons a:last-child {
+            background-color: #d42027;
+            color: #fff;
+        }
+
+        .video-section {
+            position: relative;
+            text-align: center;
+            color: white;
+            background-color: #8c2128;
+            padding: 100px 20px;
+        }
+
+        .video-section img {
+            width: 100%;
+            height: auto;
+            opacity: 0.5;
+        }
+
+        .video-section .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .video-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .video-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 800px;
+        }
+
+        .play-button {
+            font-size: 50px;
+            color: #fbbd17;
+            text-decoration: none;
+            border: 3px solid #fbbd17;
+            border-radius: 50%;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .programs-section {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .programs-header h2 {
+            font-size: 32px;
+            color: #8c2128;
+            margin-bottom: 10px;
+        }
+
+        .programs-header p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .programs-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .program-card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .program-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .program-card h3 {
+            color: #8c2128;
+            font-size: 20px;
+            padding: 10px 15px;
+        }
+
+        .program-card p {
+            font-size: 14px;
+            padding: 0 15px 10px;
+            color: #555;
+        }
+
+        .program-button {
+            display: block;
+            background-color: #fbbd17;
+            color: #000;
+            text-align: center;
+            padding: 10px 0;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .highlights {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .highlight-card {
+            width: 30%;
+            background-color: #fbbd17;
+            color: #000;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .highlight-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .highlight-card p {
+            font-size: 16px;
+        }
+        .admission-section {
+    background-image: url("https://img.freepik.com/premium-photo/close-up-red-paper-texture-background_60487-2335.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+.admission-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.admission-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: lightcyan;
+}
+.admission-section .apply-button {
+    background-color: #ffc107;
+    color: #8c2128;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.placement-section {
+    background-color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    border-top: 2px solid #8c2128;
+    border-bottom: 2px solid #8c2128;
+    margin: 50px 0;
+}
+
+.placement-section h2 {
+    color: #8c2128;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.placement-section p {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.placement-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.placement-logos img {
+    max-width: 150px;
+    margin: 0 10px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.placement-logos img:hover {
+    transform: scale(1.1);
+}
+.image-container {
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping to the next line */
+            justify-content: space-between; /* Adjusts spacing between images */
+        }
+        .image-container img {
+            width: 30%; /* Each image takes up 30% of the container width */
+            margin: 5px 0; /* Vertical margin between rows */
+        }
+        .heading-container {
+            display: flex;
+            justify-content: space-between; /* Distributes space between the two elements */
+            align-items: center; /* Aligns items vertically in the center */
+            background-color: yellow; /* Yellow background */
+            padding: 20px; /* Adds padding around the text */
+            color: royalblue;
+        }
+
+        .heading-container h3 {
+            margin: 0; /* Removes default margin */
+            font-size: 24px; /* Adjusts font size */
+        }
+        .header h1{
+            background-color: red;
+            color: yellow;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-image: url("https://wallpapers.com/images/featured/blank-white-background-xbsfzsltjksfompa.jpg");
+        }
+        
+
+        .logo {
+            width: 200px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .links h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .links a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .contact a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .disclosures {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .disclosures ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .disclosures li {
+            margin-bottom: 5px;
+        }
+
+        footer {
+            background-color: red;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+</style>
+</head>
+<body>
+
+    <header class="header">
+        <table width="100%" border="0" cellpadding="10">
+            <tr>
+                <td align="left">
+                    <img src="https://media.licdn.com/dms/image/D4E16AQEDJX5gbcdjeg/profile-displaybackgroundimage-shrink_200_800/0/1695537399154?e=2147483647&v=beta&t=_R_h9NtcxkzwwKC_4lrOSChl_cngA24O7CbhYyuRkSo" alt="MBU Logo" style="height: 60px;">
+                </td>
+                <td align="right">
+                    <a href="#" style="color: white; text-decoration: none; margin-right: 20px;">About Us</a>
+                    <a href="#" style="color: white; text-decoration: none; margin-right: 20px;">Academics</a>
+                    <a href="#" style="color: white; text-decoration: none; margin-right: 20px;">Admissions</a>
+                    <a href="#" style="color: white; text-decoration: none; margin-right: 20px;">Research</a>
+                    <a href="#" style="color: white; text-decoration: none; margin-right: 20px;">Placements</a>
+                    <a href="#" style="color: white; text-decoration: none;">Contact Us</a>
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <div class="container">
+        <img src="https://www.vidyavision.com/CollegeUploads/Photos/2024-25-1-12-19-48_MBU%20-%2015.jpg" alt="Mohan Babu University">
+        <div class="centered-text">Welcome To Mohan Babu University</div>
+        <div class="sub-text">32 Years of Unwavering Trust, 1 Universe of Possibilities.</div>
+        <a href="#" class="button">Know More</a>
+    </div>
+
+    <div class="section">
+        <img src="https://images.filmibeat.com/img/popcorn/profile_photos/mohan-babu-20220319094910-4214.jpg" alt="Mohan Babu">
+        <div class="text">
+            <h2>32 Years of Unwavering Trust, 1 Universe of Possibilities</h2>
+            <p>From a young village boy to a teacher, actor, producer, writer, Member of Parliament, philanthropist, and an educationist – it has been three decades of serving my people. Yet, every moment of this enchanting journey remains fresh in my mind.</p>
+            <p>At heart, I am still that dreamer from Modhugulapalem who followed his father’s footsteps to become an educator. A proud son of a dedicated school headmaster, it humbles me to have continued his legacy, first as a teacher myself and then as the Chairman of the renowned Sree Vidyanikethan Educational Trust (SVET). Since its inception in 1992, the seed of SVET has flourished into a large Kalpavriksha – helping thousands of young learners fulfill their aspirations.</p>
+            <div class="buttons">
+                <a href="#">Know More</a>
+                <a href="#">Download Brochure</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-section">
+        <img src="https://d3sr7cc30ek8f4.cloudfront.net/images/size:1500x1500/type:cover/prod/634ec7b9fc01ee0010022344/VS129685.jpg" alt="Education Video Background">
+        <div class="overlay-text">
+            <h2>We Believe That Education is An Important Aspect in Every Person’s Life</h2>
+            <p>Ranked in the 150-200 band of NIRF Rankings and the 51-100 band for NIRF Innovation Ranking, it has also secured the coveted Diamond band in the QS-I Gauge. Its academic prowess is further validated by NAAC A+ and NBA accreditations, along with a platinum category distinction in the AICTE-CII survey.</p>
+            <a href="#" class="play-button">&#9658;</a>
+        </div>
+    </div>
+
+    <div class="programs-section">
+        <div class="programs-header">
+            <h2>Our Programs</h2>
+            <p>Explore a diverse array of cutting-edge courses at Mohan Babu University, where academic excellence meets real-world relevance. From innovative technology programs to dynamic business courses, our curriculum is designed to dream big and achieve bigger.</p>
+        </div>
+        <div class="programs-grid">
+            <div class="program-card">
+                <img src="https://www.mbu.asia/wp-content/uploads/2024/06/school-of-comp21-1.jpg" alt="School of Computing">
+                <h3>School of Computing</h3>
+                <p>MB School of Computing is committed to research, undertaking projects funded by various agencies including DST, INUP, ISRO RESPOND, and UGC.</p>
+                <a href="#" class="program-button">Know More</a>
+            </div>
+            <div class="program-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBPxjw36ZpAjeUKLR2YODXnwfZ4b2nrEl4QYYGLgYVPd48YazoK4tiEm0poW0q_WlTKEs&usqp=CAU" alt="School of Engineering">
+                <h3>School of Engineering</h3>
+                <p>MB School of Engineering is committed to research, undertaking projects funded by various agencies including DST, INUP, ISRO RESPOND, and UGC.</p>
+                <a href="#" class="program-button">Know More</a>
+            </div>
+            <div class="program-card">
+                <img src="https://www.mbu.asia/wp-content/uploads/2024/06/school-of-commerce1-1.jpg" alt="School of Commerce and Management">
+                <h3>School of Commerce and Management</h3>
+                <p>The School of Commerce and Management stands as an inspiration for academic excellence, cultivating future leaders in the dynamic business world.</p>
+                <a href="#" class="program-button">Know More</a>
+            </div>
+            <div class="program-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7JkJ4ox-pSNxqeNL7zdn55XhTC14vhRjMcw&s" alt="School of Pharmaceutical Sciences">
+                <h3>School of Pharmaceutical Sciences</h3>
+                <p>MB School of Pharmaceutical Sciences provides excellent opportunities for aspiring pharmacists in both pharmaceutical industries and healthcare multinational corporations in India.</p>
+                <a href="#" class="program-button">Know More</a>
+            </div>
+            <div class="program-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsU7c6em1sSEev_ABAQwWrZS01vU4U-WII3w&s" alt="School of Paramedical Allied & Healthcare Sciences">
+                <h3>School of Paramedical Allied & Healthcare Sciences</h3>
+                <p>The School of Paramedical and Allied Health Sciences was established with the objective to produce well-trained paramedical and allied health professionals.</p>
+                <a href="#" class="program-button">Know More</a>
+            </div>
+            <div class="program-card">
+                <img src="https://www.mbu.asia/wp-content/uploads/2024/06/school-of-agri1-1.jpg" alt="School of Agriculture">
+                <h3>School of Agriculture</h3>
+                <p>The School of Agriculture aims to bring new paradigms in learning various sciences and technologies embraced in the field of agriculture and allied fields like Horticulture, Agribusiness Management, Animal Husbandry, Food Science...</p>
+                <a href="#" class="program-button">Know More</a>
+            </div>
+        </div>
+        <div class="highlights">
+            <div class="highlight-card">
+                <h3>50+ Programs</h3>
+                <p>Explore a wide-range of industry-focused and essential programs.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>Best Faculty</h3>
+                <p>Learn from the best experts and professors of the subjects.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>Top in Placements</h3>
+                <p>Career Development Centre engaged with over 110+ companies.</p>
+            </div>
+        </div>
+    </div>
+    <div class="admission-section">
+        <h1>Admission Open 2024</h1>
+        <p>Step into your future with MBU!</p>
+        <p>Explore our diverse range of over 50 programs designed to prepare you for success in tomorrow’s world. At Mohan Babu University, we provide unparalleled resources, from world-class infrastructure to research-driven faculty, ensuring you have every opportunity to excel. Our vibrant campus and dynamic environment foster a lifelong journey of learning and growth. With amazing placements and career opportunities awaiting our graduates, you can be confident in your path to success. Discover the perfect fit for your ambitions among our Undergraduate, Postgraduate, and Doctoral programs across various schools. Your bright tomorrow starts here at Mohan Babu University.</p>
+        <a href="#" class="apply-button">Apply Now</a>
+    </div>
+    <section class="placement-section">
+        <h2>Placement Partners</h2>
+        <p>In the year 2022-23, the Career Development Centre engaged with over 110+ companies on campus for placements. The highest offer was 60 lakhs per annum by Google, followed by Amazon's offer of 44 lakhs per annum.</p>
+        <div class="placement-logos">
+            <img src="https://download.logo.wine/logo/Cognizant/Cognizant-Logo.wine.png" alt="Cognizant">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTPAWYqoR1E-YMPwd869I0X2WuToOjTrPXgQ&s" alt="TCS">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Deloitte_Logo.png" alt="Deloitte">
+            <img src="https://companieslogo.com/img/orig/WIT_BIG-0de2dc21.png?t=1720244494" alt="Wipro">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3pj6Dwf_F7ucAjn7hRXhZsKvytaqdRZtPVA&s" alt="Google">
+            <img src="https://download.logo.wine/logo/HCL_Technologies/HCL_Technologies-Logo.wine.png" alt="HCL">
+        </div>
+    </section>
+    <div class="heading-container">
+        <h3>Life@MBU</h3>
+        <a href="#">View All</a> <!-- Link to "View All" -->
+    </div>
+    <div class="image-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw0yHbMdF12JYRK_Xs3hhMSCrPJ8YAgkJB8A&s" alt="Image 1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-yGoymXHe9mFW8dTSBDXFgy-HPfbCnp4rl4mveOZc66zkLE2YxOhrC8x1eSeksSrf4aU&usqp=CAU" alt="Image 2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ44Gm57myX2y1_WfxRCSMGeqYleivxp08VFD4xtZnc2VelGfHwvsM727x3jq3uVIF77Tk&usqp=CAU" alt="Image 3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_7Pa5K-S0tyrEvW80L6h_7sE-H_qVPI2r21ywTvxIgnnfFiapuFXlng_ooJB83YFiSeI&usqp=CAU" alt="Image 4">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlzFDuCgjGp0cU1wC2Q1ppwiRx0iPRYCInDQ&s" alt="Image 5">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAQdHvKfOErpFWeuLSSV1IR1EH6uTO8pYOQQ&s" alt="Image 6">
+    </div>
+    <header class="header">
+        <h1>32 Years of Unwavering Trust, 1 Universe of Possibilities</h1>
+        <a href="#" class="apply-now">Apply Now</a>
+    </header>
+    <main class="content">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/4b/Mohan_Babu_University_Logo%2C_Tirupati%2C_Andhra_Pradesh%2C_India.png" alt="MBU Logo">
+        </div>
+        <div class="links">
+            <h3>Quick Links</h3>
+            <a href="#">About Us</a>
+            <a href="#">Admissions</a>
+            <a href="#">Academics</a>
+            <a href="#">Placements</a>
+            <a href="#">Leadership</a>
+        </div>
+        <div class="links">
+            <h3>Useful Links</h3>
+            <a href="#">Central Library</a>
+            <a href="#">Media</a>
+            <a href="#">Careers</a>
+            <a href="#">Alumni</a>
+            <a href="#">Gallery</a>
+        </div>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>Sree Sainath Nagar, Tirupati, Chittoor (District), AP-517102.</p>
+            <a href="tel:+919469465946">+91 9469465946</a>
+            <a href="mailto:admissions@mbu.asia">admissions@mbu.asia</a>
+            <a href="#" class="get-directions">Get Directions</a>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Mohan Babu University (MBU). All Rights Reserved.</p>
+    </footer>
+    
+
+</body>
+</html>
+
